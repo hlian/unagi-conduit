@@ -21,6 +21,20 @@ readChan :: (Readable chan, ReadableConstraint chan a) => chan a -> IO a
 -- | A typeclass for writeable, blocking Unagi channels
 class Writeable chan where type family WriteableConstraint chan a :: Constraint
 writeChan :: (Writeable chan, WriteableConstraint chan a) => chan a -> a -> IO ()
+
+-- | <a>Control.Concurrent.Chan.Unagi.OutChan</a> (unbounded queue)
+
+-- | <a>Control.Concurrent.Chan.Unagi.Bounded.OutChan</a> (bounded queue)
+
+-- | <a>Control.Concurrent.Chan.Unagi.Unboxed.OutChan</a> (unbounded queue
+--   for unboxed types)
+
+-- | <a>Control.Concurrent.Chan.Unagi.InChan</a> (unbounded queue)
+
+-- | <a>Control.Concurrent.Chan.Unagi.Bounded.InChan</a> (bounded queue)
+
+-- | <a>Control.Concurrent.Chan.Unagi.Unboxed.InChan</a> (unbounded queue
+--   for unboxed types)
 instance Data.Conduit.Chan.Unagi.Types.Readable Control.Concurrent.Chan.Unagi.Internal.OutChan
 instance Data.Conduit.Chan.Unagi.Types.Readable Control.Concurrent.Chan.Unagi.Bounded.Internal.OutChan
 instance Data.Conduit.Chan.Unagi.Types.Readable Control.Concurrent.Chan.Unagi.Unboxed.Internal.OutChan
