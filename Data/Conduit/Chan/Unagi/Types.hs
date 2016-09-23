@@ -26,26 +26,32 @@ class Writeable chan where
   type WriteableConstraint chan a :: Constraint
   writeChan :: WriteableConstraint chan a => chan a -> a -> IO ()
 
+-- | "Control.Concurrent.Chan.Unagi.OutChan" (unbounded queue)
 instance Readable U.OutChan where
   type ReadableConstraint U.OutChan a = ()
   readChan = U.readChan
 
+-- | "Control.Concurrent.Chan.Unagi.Bounded.OutChan" (bounded queue)
 instance Readable UB.OutChan where
   type ReadableConstraint UB.OutChan a = ()
   readChan = UB.readChan
 
+-- | "Control.Concurrent.Chan.Unagi.Unboxed.OutChan" (unbounded queue for unboxed types)
 instance Readable UX.OutChan where
   type ReadableConstraint UX.OutChan a = UX.UnagiPrim a
   readChan = UX.readChan
 
+-- | "Control.Concurrent.Chan.Unagi.InChan" (unbounded queue)
 instance Writeable U.InChan where
   type WriteableConstraint U.InChan a = ()
   writeChan = U.writeChan
 
+-- | "Control.Concurrent.Chan.Unagi.Bounded.InChan" (bounded queue)
 instance Writeable UB.InChan where
   type WriteableConstraint UB.InChan a = ()
   writeChan = UB.writeChan
 
+-- | "Control.Concurrent.Chan.Unagi.Unboxed.InChan" (unbounded queue for unboxed types)
 instance Writeable UX.InChan where
   type WriteableConstraint UX.InChan a = UX.UnagiPrim a
   writeChan = UX.writeChan
