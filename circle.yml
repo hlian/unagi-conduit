@@ -24,4 +24,4 @@ test:
     - circle/write-docs
 general:
   artifacts:
-    - "~/.cache/gh-pages"
+    - "~/.cache"

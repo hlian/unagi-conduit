@@ -15,5 +15,7 @@ command git reset --soft master
 
 # if the upstream has changed because of concurrent builds, just give
 # up
-command git commit -am "[automated] [ci skip] write-docs: updated haddock" docs || true
-command git push origin master:master || true
+command git add docs
+command git commit -m "[automated] [ci skip] write-docs: updated haddock" || true
+command git remote add authorized "https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git"
+command git push authorized master:master || true
