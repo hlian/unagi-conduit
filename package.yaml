@@ -1,0 +1,19 @@
+name:                unagi-conduit
+version:             1.0.0.0
+synopsis:            conduits for unagi channels
+description:         see README.md
+homepage:            https://github.com/githubuser/unagi-conduit#readme
+license:             BSD3
+author:              Hao Lian
+maintainer:          hi@haolian.org
+copyright:           2016 Hao Lian
+category:            Data, Conduit
+
+dependencies:
+  - base >= 4.7 && < 5
+  - conduit
+  - transformers
+  - unagi-chan
+
+library:
+  source-dirs: .

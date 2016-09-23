@@ -1,0 +1,7 @@
+resolver: lts-6.17
+packages:
+  - '.'
+extra-deps:
+  - unagi-chan-0.4.0.0
+flags: {}
+extra-package-dbs: []
