@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 
 set -euxo pipefail
-DEST="/home/ubuntu/.cache/gh-pages/"
+DEST="/home/ubuntu/.cache/hackage"
 
-command cp -a $(stack path --local-doc-root)/linklater-4.0.0.0/* -- "$DEST/hackage"
+command mkdir -p $DEST || true
+command mkdir -p docs || true
+command cp -a $(stack path --local-doc-root)/unagi-conduit-1.0.0.0/* -- "$DEST/"
+command cp -a $(stack path --local-doc-root)/unagi-conduit-1.0.0.0/* -- "docs/"
 
-command cd $DEST
 command git config --global user.name "CircleCI docs update"
 command git config --global user.email "ci@circleci.com"
-
 command git fetch --all
-command git reset --soft origin/gh-pages
+command git reset --soft master
 
-# if the upstream has changed because of concurrent builds, just force
-# push and let the race happen
-command git commit -am "[automated] [ci skip] write-docs: updated haddock" || true
-command git push --force origin gh-pages:gh-pages || true
+# if the upstream has changed because of concurrent builds, just give
+# up
+command git commit -am "[automated] [ci skip] write-docs: updated haddock" docs || true
+command git push origin master:master || true
