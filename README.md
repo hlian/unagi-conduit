@@ -1,36 +1,24 @@
 <pre>
-                 .-') _    ('-.                                            ('-. .-.   ('-.         .-') _
-                 ( OO ) )  ( OO ).-.                                       ( OO )  /  ( OO ).-.    ( OO ) ) 
- ,--. ,--.   ,--./ ,--,'   / . --. /  ,----.     ,-.-')            .-----. ,--. ,--.  / . --. /,--./ ,--,'
- |  | |  |   |   \ |  |\   | \-.  \  '  .-./-')  |  |OO)   .-')   '  .--./ |  | |  |  | \-.  \ |   \ |  |\
- |  | | .-') |    \|  | ).-'-'  |  | |  |_( O- ) |  |  \ _(  OO)  |  |('-. |   .|  |.-'-'  |  ||    \|  | ) 
- |  |_|( OO )|  .     |/  \| |_.'  | |  | .--, \ |  |(_/(,------./_) |OO  )|       | \| |_.'  ||  .     |/
- |  | | `-' /|  |\    |    |  .-.  |(|  | '. (_/,|  |_.' '------'||  |`-'| |  .-.  |  |  .-.  ||  |\    |
-('  '-'(_.-' |  | \   |    |  | |  | |  '--'  |(_|  |           (_'  '--'\ |  | |  |  |  | |  ||  | \   |
-  `-----'    `--'  `--'    `--' `--'  `------'   `--'              `-----' `--' `--'  `--' `--'`--'  `--'
+  <b>~*~ hlian/unagi-conduit ~*~</b>
 
-<b>thesis</b>
+  <b>thesis</b>
 
-you know how there's stm-conduit
-   
-but there's no unagi-conduit
+    you know how there's stm-conduit
+    but there's no unagi-conduit
+    well
+    have i got news for you
 
-well
-   
-have i got news for you
+  <b>documentation</b>
 
-<b>documentation</b>
+    <a href="https://hlian.github.io/unagi-conduit/">github pages</a>
 
-<a href="https://hlian.github.io/unagi-conduit/">github pages</a>
+  <b>on hackage?</b>
 
-<b>on hackage?</b>
+    not currently
 
-not currently
+  <b>but also</b>
 
-<b>but also</b>
+    • <a href="http://hao.codes">hao lian, author</a> @hlian
 
-• <a href="http://hao.codes">hao lian, author</a> @hlian
-
-• <a href="http://contributor-covenant.org/version/1/2/0/">code of conduct</a>
-
+    • <a href="http://contributor-covenant.org/version/1/2/0/">code of conduct</a>
 </pre>
